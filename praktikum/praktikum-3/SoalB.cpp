@@ -3,6 +3,7 @@ using namespace std;
 
 const int mxn = 1005;
 vector<vector<int>> adj(mxn);
+vector<int> indegree(mxn), outdegree(mxn);
 
 int main() {
   int n, m;
@@ -11,8 +12,8 @@ int main() {
     int u, v;
     cin >> u >> v;
     adj[u].push_back(v);
+    outdegree[u]++;
   }
-  vector<int> indegree(n + 1);
   for(int i = 1; i <= n; i++) {
     for(auto &next : adj[i]) {
       indegree[next]++;
@@ -20,7 +21,7 @@ int main() {
   }
   int node = -1;
   for(int i = 1; i <= n; i++) {
-    if(indegree[i] == n - 1 && adj[i].size() == 0) {
+    if(indegree[i] == n - 1 && outdegree[i] == 0) {
       node = i;
       break;
     }
