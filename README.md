@@ -4,8 +4,6 @@ This repository contains an archive of exercises, assignments, and practical exa
 
 ## Repository Contents
 
-The repository is organized into three main directories:
-
 ### Homework Assignments (tugas)
 This directory contains weekly homework assignments assigned by the course lecturer. They are implemented in C and C++.
 - [Tugas 1](tugas/tugas-1/): Basic C programming exercises using structs, pointers, and memory manipulation.
